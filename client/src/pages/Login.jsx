@@ -92,7 +92,6 @@ const Login = () => {
               <CustomButton
                 title="Login"
                 containerStyles={`inline-flex justify-center rounded-md bg-blue px-8 py-3 text-sm font-medium tex-white outline-none`}
-                iconRight=""
                 type="submit"
               />
             )}
