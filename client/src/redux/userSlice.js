@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import { createSlice } from "@reduxjs/toolkit";
-import { dispatch } from "./store";
+import { user } from "../assets/data";
 
 /* eslint-disable no-unused-vars */
 const initialState = {
-  user: JSON.parse(window?.localStorage.getItem("user")) ?? {},
+  user: JSON.parse(window?.localStorage.getItem("user")) ?? user,
   edit: false,
 };
 
@@ -16,7 +16,7 @@ const userSlice = createSlice({
       state.user = action.payload;
       localStorage.setItem("user", JSON.stringify(action.payload));
     },
-    logout(state, action) {
+    logout(state) {
       state.user = null;
       localStorage?.removeItem("user");
     },

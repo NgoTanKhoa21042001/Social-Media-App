@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import { createSlice } from "@reduxjs/toolkit";
-import { dispatch } from "./store";
 const initialState = {
   posts: {},
 };

@@ -14,5 +14,11 @@ const themeSlice = createSlice({
     },
   },
 });
+// hàm SetTheme() được sử dụng để dispatch một action đến reducer để thay đổi theme của ứng dụng.
+export function SetTheme(value) {
+  return (dispatch) => {
+    dispatch(themeSlice.actions.setTheme(value));
+  };
+}
 
 export default themeSlice.reducer;
